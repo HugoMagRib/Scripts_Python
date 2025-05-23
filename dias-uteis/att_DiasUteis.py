@@ -11,7 +11,7 @@ locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
 def exec_alteracoes_Diasuteis():
     data_hoje = datetime.now().strftime("%d/%m/%y")
     # Caminho do arquivo Excel e nome da planilha
-    file_path = f"H:/Bi/Solution/Base de Dados 2Tech/Dias Uteis.xlsx"  
+    file_path = "C:/Dias Uteis.xlsx"  
     sheet_name = "Dias uteis"        
     
     try:
@@ -20,9 +20,6 @@ def exec_alteracoes_Diasuteis():
 
         # Data atual
         hoje = datetime.now().date()
-        # current_date_str = hoje.strftime("%Y-%m-%d")  # não será mais necessário
-
-        # Removemos a verificação do log para que o script execute sempre
 
         # Determinar o primeiro dia útil do mês atual
         primeiro_dia_util = (hoje.replace(day=1) + BDay(0)).date()
